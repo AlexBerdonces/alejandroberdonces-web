@@ -3,16 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alejandro Berdonces | IA para Turismo</title>
-<meta name="description" content="Consultoría de IA para agencias de viajes y hoteles: auditorías de agentificación, SEO/AEO, contenido automático y automatización de procesos.">
+<title>Alejandro Berdonces | Consultor de IA para Turismo y Hoteles</title>
+<meta name="description" content="Auditorías de agentificación, SEO/AEO, contenido automático y automatización de procesos para agencias de viajes y hoteles con resultados medibles.">
 
-<!-- Favicon (cara pixelada) -->
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
-<!-- Preconexiones de Red para optimizar el Critical Rendering Path -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://alejandroberdonces.com/">
+<meta property="og:title" content="Alejandro Berdonces | IA para Turismo y Hoteles">
+<meta property="og:description" content="Consultoría estratégica de IA, SEO/AEO y automatización para el sector turístico con ROI medible.">
+<meta property="og:image" content="https://alejandroberdonces.com/assets/alex_sonriendo_transparente.png">
+
+<meta property="article:published_time" content="2026-06-15T08:00:00+02:00">
+<meta property="article:modified_time" content="2026-07-09T01:10:00+02:00">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
@@ -22,15 +29,13 @@
      SMACSS: CATEGORÍA BASE & VARIABLES (Diseño "Tech-Serenity")
      ========================================================================== */
   :root {
-    /* Paleta de colores extraída del banner e imagen de LinkedIn */
-    --color-bg-dark: #09121F;       /* Fondo noche ultra-premium de consultoría */
-    --color-bg-card: #121F33;       /* Contenedores de módulos ligeramente más claros */
-    --color-accent-orange: #E8743B; /* Naranja vibrante del banner para CTAs principales */
+    --color-bg-dark: #09121F;       
+    --color-bg-card: #121F33;       
+    --color-accent-orange: #E8743B; 
     --color-accent-orange-hover: #D0632C;
-    --color-tech-blue: #1E66CA;     /* Azul eléctrico del banner para acentos tech */
-    --color-border: #1E2D42;        /* Bordes sutiles integrados */
+    --color-tech-blue: #1E66CA;     
+    --color-border: #1E2D42;        
     
-    /* Tipografías y textos */
     --color-text-light: #F5F7FA;
     --color-text-dim: #94A3B8;
     --font-sans: 'Inter', -apple-system, sans-serif;
@@ -57,7 +62,6 @@
 
   a { text-decoration: none; color: inherit; }
 
-  /* Indicadores de foco accesibles de alto contraste */
   a:focus-visible, button:focus-visible {
     outline: 3px solid var(--color-tech-blue);
     outline-offset: 2px;
@@ -92,7 +96,6 @@
     padding-block: 100px;
   }
 
-  /* Registro estricto de Consultas de Contenedor (Container Queries) */
   .l-grid-container {
     container-type: inline-size;
     container-name: global-layout;
@@ -101,8 +104,6 @@
   /* ==========================================================================
      SMACSS: CATEGORÍA COMPONENTES / MÓDULOS (Metodología BEM)
      ========================================================================== */
-  
-  /* Logotipo principal */
   .brand-logo {
     font-family: var(--font-title);
     font-weight: 700;
@@ -111,7 +112,6 @@
   }
   .brand-logo__span { color: var(--color-accent-orange); }
 
-  /* Enlaces de navegación */
   .nav-menu {
     display: flex;
     gap: 32px;
@@ -124,7 +124,6 @@
   }
   .nav-menu__link:hover { color: var(--color-text-light); }
 
-  /* Botones de acción (CTAs) */
   .btn-action {
     display: inline-flex;
     align-items: center;
@@ -157,7 +156,6 @@
     border-color: var(--color-text-light);
   }
 
-  /* Bloque: HERO (Sección de Entrada) */
   .hero-panel {
     background: linear-gradient(145deg, #09121F 0%, #060B12 100%);
     position: relative;
@@ -192,7 +190,7 @@
   }
   .hero-panel__title em {
     font-style: normal;
-    color: #FFA47A; /* Tono naranja suave degradado para el énfasis */
+    color: #FFA47A; 
   }
   .hero-panel__desc {
     font-size: 1.1rem;
@@ -216,7 +214,6 @@
     max-inline-size: 320px;
   }
 
-  /* Contenedor optimizado para integrar tu silueta recortada de LinkedIn */
   .avatar-mask {
     inline-size: 280px;
     block-size: 280px;
@@ -235,7 +232,6 @@
     border-radius: 50%;
   }
 
-  /* Etiquetas informativas transversales */
   .section-badge {
     color: var(--color-tech-blue);
     font-weight: 700;
@@ -249,7 +245,6 @@
     margin-block-end: 24px;
   }
 
-  /* Bloque: SOBRE MÍ */
   .about-panel { background-color: var(--color-bg-card); }
   .about-panel__content {
     display: flex;
@@ -283,7 +278,6 @@
     margin-block-start: 6px;
   }
 
-  /* Bloque: SERVICIOS */
   .services-intro {
     color: var(--color-text-dim);
     max-inline-size: 640px;
@@ -328,7 +322,6 @@
     font-weight: 600;
   }
 
-  /* Bloque: CÓMO TRABAJO (PROCESO) */
   .process-panel { background-color: var(--color-bg-card); }
   .steps-layout {
     display: grid;
@@ -359,7 +352,6 @@
   .step-node__title { font-size: 1.05rem; margin-block-end: 8px; }
   .step-node__desc { font-size: 0.88rem; color: var(--color-text-dim); }
 
-  /* Banner Piloto Interno */
   .pilot-banner {
     background: linear-gradient(135deg, var(--color-bg-dark) 0%, #12213A 100%);
     border: 1px solid var(--color-tech-blue);
@@ -373,7 +365,6 @@
   .pilot-banner__title { font-size: 1.35rem; margin-block-end: 8px; }
   .pilot-banner__desc { color: var(--color-text-dim); font-size: 1rem; max-inline-size: 520px; }
 
-  /* Bloque: CONTACTO */
   .contact-panel__wrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -411,7 +402,6 @@
   .contact-card__title { margin-block-end: 12px; font-size: 1.4rem; }
   .contact-card__desc { color: var(--color-text-dim); margin-block-end: 28px; font-size: 1rem; }
 
-  /* Bloque: FOOTER */
   .footer-panel {
     border-block-start: 1px solid var(--color-border);
     padding-block: 40px;
@@ -422,65 +412,94 @@
   .footer-panel__link { margin-inline: 8px; transition: color 0.2s; }
   .footer-panel__link:hover { color: var(--color-text-light); }
 
-  /* Ocultar menú en pantallas muy compactas por usabilidad */
   @media (max-width: 768px) {
     .nav-menu { display: none; }
-
-    /* Reducir el hueco superior del hero para que el CTA quepa
-       en la pantalla de inicio de un iPhone estándar sin hacer scroll */
-    .l-nav {
-      padding-block: 14px;
-    }
-    .hero-panel {
-      padding-block: 24px 56px;
-    }
-    .hero-panel__wrapper {
-      gap: 24px;
-    }
-    .hero-panel__tag {
-      margin-block-end: 12px;
-    }
-    .hero-panel__title {
-      font-size: 1.65rem;
-      margin-block-end: 12px;
-    }
-    .hero-panel__desc {
-      font-size: 0.98rem;
-      margin-block-end: 20px;
-    }
+    .l-nav { padding-block: 14px; }
+    .hero-panel { padding-block: 24px 56px; }
+    .hero-panel__wrapper { gap: 24px; }
+    .hero-panel__tag { margin-block-end: 12px; }
+    .hero-panel__title { font-size: 1.65rem; margin-block-end: 12px; }
+    .hero-panel__desc { font-size: 0.98rem; margin-block-end: 20px; }
   }
 
-  /* ==========================================================================
-     CSS MODERN PARADIGM: CONTAINER QUERIES (Componentes Autogestionados)
-     ========================================================================== */
   @container global-layout (inline-size > 768px) {
-    .hero-panel__wrapper {
-      flex-direction: row;
-      text-align: left;
-    }
+    .hero-panel__wrapper { flex-direction: row; text-align: left; }
     .hero-panel__text { text-align: left; }
     .hero-panel__ctas { justify-content: flex-start; }
     .hero-panel__photo { max-inline-size: none; }
     .avatar-mask { inline-size: 320px; block-size: 320px; }
-
-    .about-panel__content {
-      flex-direction: row;
-    }
+    .about-panel__content { flex-direction: row; }
     .about-panel__body { flex: 1.2; }
     .about-panel__stats { flex: 0.8; }
-
     .services-grid { grid-template-columns: repeat(2, 1fr); }
     .steps-layout { grid-template-columns: repeat(4, 1fr); }
-
-    .pilot-banner {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-
+    .pilot-banner { flex-direction: row; justify-content: space-between; align-items: center; }
     .contact-panel__wrapper { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://alejandroberdonces.com/#agent",
+      "name": "Alejandro Berdonces | IA para Turismo",
+      "url": "https://alejandroberdonces.com/",
+      "image": "https://alejandroberdonces.com/assets/alex_sonriendo_transparente.png",
+      "description": "Consultoría estratégica de Inteligencia Artificial especializada en agencias de viajes y hoteles.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Barcelona",
+        "addressCountry": "ES"
+      },
+      "telephone": "+34620334722",
+      "sameAs": [
+        "https://www.linkedin.com/in/alexberdonces"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@context": "https://schema.org",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿En qué consiste el Diagnóstico Gratuito de IA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eliges uno de nuestros servicios especializados de IA y te enviamos una primera valoración totalmente gratuita y sin compromiso para tu agencia de viajes u hotel."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué incluye la Auditoría Express de IA y cuál es su precio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tiene un coste de 150 a 300 euros. Proporciona un diagnóstico rápido, directo y 100% accionable enfocado en optimizar un proceso interno o canal turístico concreto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué beneficio aporta la Auditoría Completa de IA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tiene una inversión de 500 a 1.500 euros. Diseñamos un roadmap detallado de implementación tecnológica con prioridades claras y una estimación directa del ROI."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo funciona la fase de Implementación de Sistemas de IA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Realizamos la puesta en marcha integral de los agentes o automatizaciones acordadas junto con un soporte y mantenimiento mensual continuo para asegurar los resultados del sistema."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -511,9 +530,8 @@
         </div>
       </div>
       <div class="hero-panel__photo">
-        <!-- PLAN MULTIMEDIA (HERO): Genera un png transparente de 'Alex_Sonriendo.jpg' borrando el fondo azul actual. La máscara CSS se encargará de darle el efecto radial moderno integrado con el fondo noche. -->
         <div class="avatar-mask">
-          <img src="assets/alex_sonriendo_transparente.png" alt="Alejandro Berdonces" class="avatar-mask__img">
+          <img src="assets/alex_sonriendo_transparente.png" alt="Alejandro Berdonces, Consultor de Inteligencia Artificial para Empresas Turísticas" class="avatar-mask__img">
         </div>
       </div>
     </div>
@@ -542,34 +560,34 @@
   <section class="l-section" id="servicios">
     <div class="l-container">
       <div class="section-badge">Servicios</div>
-      <h2 class="section-title">Cuatro formas de aplicar IA en tu negocio turístico</h2>
+      <h2 class="section-title">¿Cómo aplico la Inteligencia Artificial en tu negocio turístico?</h2>
 
       <div class="services-grid">
         <article class="service-card">
           <span class="service-card__icon" aria-hidden="true">🧭</span>
           <h3 class="service-card__title">Auditoría de agentificación</h3>
-          <p class="service-card__desc">Diagnóstico de tus procesos actuales y un roadmap de agentes de IA con ROI estimado, pensado para agencias y hoteles.</p>
+          <p class="service-card__desc">Ofrezco un diagnóstico profundo de tus procesos actuales de reservas junto a un roadmap personalizado de agentes de IA con ROI estimado, pensado para agencias y hoteles modernos.</p>
           <div class="service-card__advantage">15 años conociendo los procesos reales del sector</div>
         </article>
 
         <article class="service-card">
           <span class="service-card__icon" aria-hidden="true">🔍</span>
-          <h3 class="service-card__title">Auditoría SEO/AEO</h3>
-          <p class="service-card__desc">Análisis de tu posicionamiento en Google y en motores de IA (ChatGPT, Perplexity) con problemas detectados y prioridades.</p>
+          <h3 class="service-card__title">Auditoría SEO / AEO</h3>
+          <p class="service-card__desc">Ejecuto un análisis exhaustivo de tu posicionamiento en Google y en motores de IA (ChatGPT Search, Perplexity) detectando problemas de indexación para potenciar tus citaciones directas.</p>
           <div class="service-card__advantage">Experiencia SEO real: 200+ landing pages</div>
         </article>
 
         <article class="service-card">
           <span class="service-card__icon" aria-hidden="true">📢</span>
           <h3 class="service-card__title">Sistema de contenido automático</h3>
-          <p class="service-card__desc">Publicaciones automatizadas en blogs, redes sociales u otros canales, el mismo sistema que uso para mi propia marca desde junio 2026.</p>
+          <p class="service-card__desc">Implemento publicaciones automatizadas de alta calidad en blogs y redes sociales. Es el mismo ecosistema validado en producción para mi propia marca desde junio de 2026.</p>
           <div class="service-card__advantage">Caso real propio, funcionando en producción</div>
         </article>
 
         <article class="service-card">
           <span class="service-card__icon" aria-hidden="true">⚙️</span>
           <h3 class="service-card__title">Automatización de procesos</h3>
-          <p class="service-card__desc">CRM, email marketing, reservas y operativa interna conectados para que no se pierda tiempo en tareas repetitivas.</p>
+          <p class="service-card__desc">Conecto tus sistemas de CRM, email marketing y reservas de forma integrada para eliminar fugas de tiempo operativas y automatizar tus flujos de tareas repetitivas de forma segura.</p>
           <div class="service-card__advantage">Zoho + Mailchimp + Python en producción real</div>
         </article>
       </div>
@@ -579,29 +597,29 @@
   <section class="process-panel l-section" id="como-trabajo">
     <div class="l-container">
       <div class="section-badge">Cómo trabajo</div>
-      <h2 class="section-title">De gratis a implementación, sin sorpresas</h2>
+      <h2 class="section-title">¿Cuáles son las fases de implementación de consultoría de IA?</h2>
       <p class="services-intro">Empezamos siempre por algo pequeño y gratuito para que veas el valor antes de comprometerte a nada.</p>
       
       <div class="steps-layout">
         <div class="step-node">
           <div class="step-node__num">1</div>
           <h4 class="step-node__title">Diagnóstico gratuito</h4>
-          <p class="step-node__desc">Elije uno de los servicios y te enviaré una primera valoración de forma gratuita.</p>
+          <p class="step-node__desc">Elige uno de los servicios informacionales de IA y te enviaré una primera valoración de forma gratuita.</p>
         </div>
         <div class="step-node">
           <div class="step-node__num">2</div>
           <h4 class="step-node__title">Auditoría express</h4>
-          <p class="step-node__desc">150–300 €. Diagnóstico rápido y accionable de un proceso o canal concreto.</p>
+          <p class="step-node__desc">Inversión fija de 150–300 €. Obtén un diagnóstico rápido y accionable de un proceso o canal concreto.</p>
         </div>
         <div class="step-node">
           <div class="step-node__num">3</div>
           <h4 class="step-node__title">Auditoría completa</h4>
-          <p class="step-node__desc">500–1.500 €. Roadmap detallado con prioridades y ROI estimado.</p>
+          <p class="step-node__desc">Inversión fija de 500–1.500 €. Diseñamos tu roadmap detallado con prioridades y ROI estimado.</p>
         </div>
         <div class="step-node">
           <div class="step-node__num">4</div>
           <h4 class="step-node__title">Implementación</h4>
-          <p class="step-node__desc">Puesta en marcha y mantenimiento mensual del sistema acordado.</p>
+          <p class="step-node__desc">Puesta en marcha ágil y mantenimiento mensual continuo de todo el sistema tecnológico acordado.</p>
         </div>
       </div>
 
