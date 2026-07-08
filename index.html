@@ -425,6 +425,29 @@
   /* Ocultar menú en pantallas muy compactas por usabilidad */
   @media (max-width: 768px) {
     .nav-menu { display: none; }
+
+    /* Reducir el hueco superior del hero para que el CTA quepa
+       en la pantalla de inicio de un iPhone estándar sin hacer scroll */
+    .l-nav {
+      padding-block: 14px;
+    }
+    .hero-panel {
+      padding-block: 24px 56px;
+    }
+    .hero-panel__wrapper {
+      gap: 24px;
+    }
+    .hero-panel__tag {
+      margin-block-end: 12px;
+    }
+    .hero-panel__title {
+      font-size: 1.65rem;
+      margin-block-end: 12px;
+    }
+    .hero-panel__desc {
+      font-size: 0.98rem;
+      margin-block-end: 20px;
+    }
   }
 
   /* ==========================================================================
