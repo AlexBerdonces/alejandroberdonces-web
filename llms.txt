@@ -1,0 +1,21 @@
+# Alejandro Berdonces
+
+> Consultor de Inteligencia Artificial especializado en turismo y hostelería (agencias de viajes, hoteles y touroperadores). 15 años de experiencia operativa en Estiber S.A. (touroperador líder en España en esquí y aventura) aplicados a auditorías de agentificación, SEO/AEO, contenido automático y automatización de procesos. Basado en Barcelona, España.
+
+## Páginas principales
+
+- [Español (principal)](https://alejandroberdonces.com/): Perfil, servicios y contacto en castellano.
+- [English](https://alejandroberdonces.com/en/): Profile, services and contact in English.
+
+## Servicios
+
+- Auditoría de agentificación: diagnóstico de procesos y roadmap de agentes de IA con ROI estimado.
+- Auditoría SEO/AEO multimotor: posicionamiento en Google y en motores de IA (ChatGPT Search, Perplexity, Copilot).
+- Contenido automático: sistemas de publicación validados en producción.
+- Automatización de procesos: integración de CRM, email marketing y reservas.
+
+## Contacto
+
+- Email: aberdonces@gmail.com
+- LinkedIn: https://www.linkedin.com/in/alexberdonces
+- Teléfono: +34 620 334 722
