@@ -6,16 +6,23 @@
 <title>Alejandro Berdonces | Consultor de IA para Turismo y Hoteles</title>
 <meta name="description" content="Auditorías de agentificación, SEO/AEO, contenido automático y automatización de procesos para agencias de viajes y hoteles con resultados medibles.">
 
-<link rel="icon" href="assets/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="icon" href="/assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+<link rel="canonical" href="https://alejandroberdonces.com/">
+<link rel="alternate" hreflang="es" href="https://alejandroberdonces.com/">
+<link rel="alternate" hreflang="en" href="https://alejandroberdonces.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://alejandroberdonces.com/">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://alejandroberdonces.com/">
 <meta property="og:title" content="Alejandro Berdonces | IA para Turismo y Hoteles">
 <meta property="og:description" content="Consultoría estratégica de IA, SEO/AEO y automatización para el sector turístico con ROI medible.">
 <meta property="og:image" content="https://alejandroberdonces.com/assets/alex_sonriendo_transparente.png">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_US">
 
 <meta property="article:published_time" content="2026-06-15T08:00:00+02:00">
 <meta property="article:modified_time" content="2026-07-09T01:10:00+02:00">
@@ -123,6 +130,32 @@
     transition: color 0.2s ease;
   }
   .nav-menu__link:hover { color: var(--color-text-light); }
+
+  .l-nav__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+  }
+  .lang-switch__link {
+    color: var(--color-text-dim);
+    padding: 2px 3px;
+  }
+  .lang-switch__link:hover { color: var(--color-text-light); }
+  .lang-switch__link--active {
+    color: var(--color-text-light);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .lang-switch__sep { color: var(--color-border); }
 
   .btn-action {
     display: inline-flex;
@@ -415,6 +448,9 @@
   @media (max-width: 768px) {
     .nav-menu { display: none; }
     .l-nav { padding-block: 14px; }
+    .l-nav__actions { gap: 10px; }
+    .lang-switch { font-size: 0.75rem; }
+    .btn-action { padding-inline: 20px; }
     .hero-panel { padding-block: 24px 56px; }
     .hero-panel__wrapper { gap: 24px; }
     .hero-panel__tag { margin-block-end: 12px; }
@@ -512,7 +548,14 @@
       <a href="#como-trabajo" class="nav-menu__link">Cómo trabajo</a>
       <a href="#contacto" class="nav-menu__link">Contacto</a>
     </nav>
-    <a class="btn-action btn-action--primary" href="mailto:aberdonces@gmail.com?subject=Quiero%20una%20auditor%C3%ADa%20gratuita">Hablemos</a>
+    <div class="l-nav__actions">
+      <div class="lang-switch" aria-label="Selector de idioma">
+        <span class="lang-switch__link lang-switch__link--active" aria-current="true">ES</span>
+        <span class="lang-switch__sep">/</span>
+        <a href="/en/" class="lang-switch__link" hreflang="en">EN</a>
+      </div>
+      <a class="btn-action btn-action--primary" href="mailto:aberdonces@gmail.com?subject=Quiero%20una%20auditor%C3%ADa%20gratuita">Hablemos</a>
+    </div>
   </div>
 </header>
 
@@ -531,7 +574,7 @@
       </div>
       <div class="hero-panel__photo">
         <div class="avatar-mask">
-          <img src="assets/alex_sonriendo_transparente.png" alt="Alejandro Berdonces, Consultor de Inteligencia Artificial para Empresas Turísticas" class="avatar-mask__img">
+          <img src="/assets/alex_sonriendo_transparente.png" alt="Alejandro Berdonces, Consultor de Inteligencia Artificial para Empresas Turísticas" class="avatar-mask__img">
         </div>
       </div>
     </div>
