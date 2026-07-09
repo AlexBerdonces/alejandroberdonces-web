@@ -479,26 +479,48 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Person",
+      "@id": "https://alejandroberdonces.com/en/#alex",
+      "name": "Alejandro Berdonces",
+      "jobTitle": "AI Consultant for Travel & Hospitality",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Estiber S.A."
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/alexberdonces"
+      ]
+    },
+    {
       "@type": "ProfessionalService",
       "@id": "https://alejandroberdonces.com/en/#agent",
       "name": "Alejandro Berdonces | AI for Travel",
       "url": "https://alejandroberdonces.com/en/",
       "image": "https://alejandroberdonces.com/assets/alex_sonriendo_transparente.png",
       "description": "Strategic Artificial Intelligence consulting specialized in travel agencies and hotels.",
+      "provider": {
+        "@type": "Person",
+        "@id": "https://alejandroberdonces.com/en/#alex"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Barcelona",
         "addressCountry": "ES"
       },
-      "telephone": "+34620334722",
-      "sameAs": [
-        "https://www.linkedin.com/in/alexberdonces"
-      ]
+      "telephone": "+34620334722"
     },
     {
       "@type": "FAQPage",
       "@context": "https://schema.org",
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does AI search optimization (AEO) differ from traditional SEO for hotels?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Traditional SEO targets search engine ranking positions. AEO (Answer Engine Optimization) optimizes content architecture so AI systems like Perplexity or ChatGPT Search directly cite your hotel brand inside text answers."
+          }
+        },
         {
           "@type": "Question",
           "name": "What does the Free AI Diagnosis include?",
@@ -608,29 +630,29 @@
       <div class="services-grid">
         <article class="service-card">
           <span class="service-card__icon" aria-hidden="true">🧭</span>
-          <h3 class="service-card__title">AI Agent Audit</h3>
-          <p class="service-card__desc">I offer an in-depth diagnosis of your current booking processes, together with a tailored AI-agent roadmap with estimated ROI — built for modern agencies and hotels.</p>
+          <h3 class="service-card__title">What does the AI Agent Audit provide?</h3>
+          <p class="service-card__desc"><strong>Get a complete technology implementation roadmap with an estimated ROI calculation.</strong> I deliver an in-depth diagnosis of your current booking processes, tailoring automation pipelines for modern agencies and hotels.</p>
           <div class="service-card__advantage">15 years knowing the industry's real processes</div>
         </article>
 
         <article class="service-card">
           <span class="service-card__icon" aria-hidden="true">🔍</span>
-          <h3 class="service-card__title">SEO / AEO Audit</h3>
-          <p class="service-card__desc">I run a thorough analysis of your ranking on Google and on AI engines (ChatGPT Search, Perplexity), spotting indexing issues to boost your direct citations.</p>
+          <h3 class="service-card__title">How does the SEO / AEO Audit work?</h3>
+          <p class="service-card__desc"><strong>Boost your direct brand citations across ChatGPT Search, Perplexity, and Google AI Overviews.</strong> I run a thorough analysis of indexing structures, technical rendering issues, and LLM entity visibility.</p>
           <div class="service-card__advantage">Real SEO experience: 200+ landing pages</div>
         </article>
 
         <article class="service-card">
           <span class="service-card__icon" aria-hidden="true">📢</span>
-          <h3 class="service-card__title">Automated Content System</h3>
-          <p class="service-card__desc">I set up high-quality automated publishing for blogs and social media — the same system I've been running in production for my own brand since June 2026.</p>
+          <h3 class="service-card__title">What is the Automated Content System?</h3>
+          <p class="service-card__desc"><strong>Deploy high-quality automated publishing pipelines for blogs and social media channels safely.</strong> I set up verified production workflows running live since June 2026 to ensure consistent freshness indicators.</p>
           <div class="service-card__advantage">My own real case, running in production</div>
         </article>
 
         <article class="service-card">
           <span class="service-card__icon" aria-hidden="true">⚙️</span>
-          <h3 class="service-card__title">Process Automation</h3>
-          <p class="service-card__desc">I connect your CRM, email marketing and booking systems so you stop losing time on operations, safely automating repetitive task flows.</p>
+          <h3 class="service-card__title">Why implement custom Process Automation?</h3>
+          <p class="service-card__desc"><strong>Connect your CRM, email marketing, and booking systems to eliminate repetitive operational task blocks.</strong> I scale secure automated triggers using verified workflows built on Zoho, Mailchimp, and Python environments.</p>
           <div class="service-card__advantage">Zoho + Mailchimp + Python in real production</div>
         </article>
       </div>
