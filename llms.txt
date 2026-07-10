@@ -6,6 +6,8 @@
 
 - [Español (principal)](https://alejandroberdonces.com/): Perfil, servicios y contacto en castellano.
 - [English](https://alejandroberdonces.com/en/): Profile, services and contact in English.
+- [Français](https://alejandroberdonces.com/fr/): Profil, services et contact en français.
+- [Català](https://alejandroberdonces.com/ca/): Perfil, serveis i contacte en català.
 
 ## Servicios
 
