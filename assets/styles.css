@@ -463,6 +463,99 @@ a:focus-visible, button:focus-visible {
 }
 .footer-panel__link { margin-inline: 8px; transition: color 0.2s; }
 .footer-panel__link:hover { color: var(--color-text-light); }
+.footer-panel__link--btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  color: var(--color-text-dim);
+}
+.footer-panel__link--btn:hover { color: var(--color-text-light); }
+
+/* --------------------------------------------------------------------------
+   COOKIE BANNER
+   -------------------------------------------------------------------------- */
+.cookie-banner {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 300;
+  background-color: var(--color-bg-card);
+  border-block-start: 1px solid var(--color-border);
+  box-shadow: 0 -12px 32px rgba(0, 0, 0, 0.4);
+  padding-block: 20px;
+}
+.cookie-banner[hidden] { display: none; }
+.cookie-banner__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+}
+.cookie-banner__text {
+  color: var(--color-text-dim);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.cookie-banner__text a {
+  color: #5FA3FF;
+  text-decoration: underline;
+}
+.cookie-banner__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.cookie-banner__actions .btn-action {
+  flex: 1;
+  padding-block: 10px;
+  font-size: 0.9rem;
+}
+.btn-action--ghost {
+  background-color: transparent;
+  border: 1.5px solid var(--color-border);
+  color: var(--color-text-dim);
+}
+.btn-action--ghost:hover {
+  border-color: var(--color-text-light);
+  color: var(--color-text-light);
+}
+
+@container global-layout (inline-size > 768px) {
+  .cookie-banner__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+  }
+  .cookie-banner__text { max-inline-size: 620px; }
+  .cookie-banner__actions { flex-shrink: 0; }
+  .cookie-banner__actions .btn-action { flex: none; }
+}
+
+/* --------------------------------------------------------------------------
+   PÁGINA LEGAL (política de cookies)
+   -------------------------------------------------------------------------- */
+.legal-panel { padding-block: 64px; }
+.legal-panel h1 { font-size: 2rem; margin-block-end: 24px; }
+.legal-panel h2 { font-size: 1.3rem; margin-block: 32px 12px; color: var(--color-tech-blue); }
+.legal-panel p, .legal-panel li { color: var(--color-text-dim); font-size: 1rem; margin-block-end: 12px; }
+.legal-panel ul { padding-inline-start: 20px; }
+.legal-panel table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-block: 16px;
+  font-size: 0.9rem;
+}
+.legal-panel th, .legal-panel td {
+  border: 1px solid var(--color-border);
+  padding: 10px 12px;
+  text-align: left;
+  color: var(--color-text-dim);
+}
+.legal-panel th { color: var(--color-text-light); background-color: var(--color-bg-dark); }
+.legal-panel a { color: #5FA3FF; text-decoration: underline; }
 
 /* --------------------------------------------------------------------------
    RESPONSIVE
