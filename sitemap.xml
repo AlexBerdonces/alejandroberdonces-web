@@ -7,31 +7,13 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alejandroberdonces.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://alejandroberdonces.com/en/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://alejandroberdonces.com/fr/" />
     <xhtml:link rel="alternate" hreflang="ca" href="https://alejandroberdonces.com/ca/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alejandroberdonces.com/" />
-  </url>
-  <url>
-    <loc>https://alejandroberdonces.com/en/</loc>
-    <lastmod>2026-07-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://alejandroberdonces.com/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://alejandroberdonces.com/ca/politica-de-cookies/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://alejandroberdonces.com/en/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alejandroberdonces.com/en/cookie-policy/" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://alejandroberdonces.com/fr/" />
-    <xhtml:link rel="alternate" hreflang="ca" href="https://alejandroberdonces.com/ca/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alejandroberdonces.com/" />
-  </url>
-  <url>
-    <loc>https://alejandroberdonces.com/fr/</loc>
-    <lastmod>2026-07-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://alejandroberdonces.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://alejandroberdonces.com/en/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://alejandroberdonces.com/fr/" />
-    <xhtml:link rel="alternate" hreflang="ca" href="https://alejandroberdonces.com/ca/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alejandroberdonces.com/fr/politique-cookies/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://alejandroberdonces.com/politica-cookies/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://alejandroberdonces.com/" />
   </url>
   <url>
@@ -40,9 +22,103 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://alejandroberdonces.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://alejandroberdonces.com/en/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://alejandroberdonces.com/fr/" />
     <xhtml:link rel="alternate" hreflang="ca" href="https://alejandroberdonces.com/ca/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://alejandroberdonces.com/ca/politica-de-cookies/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alejandroberdonces.com/en/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alejandroberdonces.com/en/cookie-policy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alejandroberdonces.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alejandroberdonces.com/fr/politique-cookies/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://alejandroberdonces.com/politica-cookies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alejandroberdonces.com/" />
+  </url>
+  <url>
+    <loc>https://alejandroberdonces.com/ca/politica-de-cookies/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alejandroberdonces.com/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://alejandroberdonces.com/ca/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://alejandroberdonces.com/ca/politica-de-cookies/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alejandroberdonces.com/en/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alejandroberdonces.com/en/cookie-policy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alejandroberdonces.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alejandroberdonces.com/fr/politique-cookies/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://alejandroberdonces.com/politica-cookies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alejandroberdonces.com/" />
+  </url>
+  <url>
+    <loc>https://alejandroberdonces.com/en/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alejandroberdonces.com/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://alejandroberdonces.com/ca/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://alejandroberdonces.com/ca/politica-de-cookies/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alejandroberdonces.com/en/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alejandroberdonces.com/en/cookie-policy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alejandroberdonces.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alejandroberdonces.com/fr/politique-cookies/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://alejandroberdonces.com/politica-cookies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alejandroberdonces.com/" />
+  </url>
+  <url>
+    <loc>https://alejandroberdonces.com/en/cookie-policy/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alejandroberdonces.com/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://alejandroberdonces.com/ca/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://alejandroberdonces.com/ca/politica-de-cookies/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alejandroberdonces.com/en/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alejandroberdonces.com/en/cookie-policy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alejandroberdonces.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alejandroberdonces.com/fr/politique-cookies/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://alejandroberdonces.com/politica-cookies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alejandroberdonces.com/" />
+  </url>
+  <url>
+    <loc>https://alejandroberdonces.com/fr/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alejandroberdonces.com/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://alejandroberdonces.com/ca/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://alejandroberdonces.com/ca/politica-de-cookies/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alejandroberdonces.com/en/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alejandroberdonces.com/en/cookie-policy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alejandroberdonces.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alejandroberdonces.com/fr/politique-cookies/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://alejandroberdonces.com/politica-cookies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alejandroberdonces.com/" />
+  </url>
+  <url>
+    <loc>https://alejandroberdonces.com/fr/politique-cookies/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alejandroberdonces.com/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://alejandroberdonces.com/ca/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://alejandroberdonces.com/ca/politica-de-cookies/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alejandroberdonces.com/en/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alejandroberdonces.com/en/cookie-policy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alejandroberdonces.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alejandroberdonces.com/fr/politique-cookies/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://alejandroberdonces.com/politica-cookies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alejandroberdonces.com/" />
+  </url>
+  <url>
+    <loc>https://alejandroberdonces.com/politica-cookies/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://alejandroberdonces.com/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://alejandroberdonces.com/ca/" />
+    <xhtml:link rel="alternate" hreflang="ca" href="https://alejandroberdonces.com/ca/politica-de-cookies/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alejandroberdonces.com/en/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://alejandroberdonces.com/en/cookie-policy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alejandroberdonces.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://alejandroberdonces.com/fr/politique-cookies/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://alejandroberdonces.com/politica-cookies/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://alejandroberdonces.com/" />
   </url>
 </urlset>

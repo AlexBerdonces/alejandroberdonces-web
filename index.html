@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WRJHVFC8');</script>
-<!-- End Google Tag Manager -->
+<!-- Google Tag Manager: se carga solo tras aceptar cookies, ver /assets/cookie-consent.js -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alejandro Berdonces | Consultor de IA para Turismo y Hoteles</title>
@@ -124,10 +118,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRJHVFC8"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
 <header class="l-header">
   <div class="l-container l-nav">
@@ -313,11 +303,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <footer class="footer-panel">
   <div class="l-container">
-    &copy; 2026 Alejandro Berdonces · Barcelona · 
-    <a href="https://www.linkedin.com/in/alexberdonces" target="_blank" rel="noopener" class="footer-panel__link">LinkedIn</a> · 
-    <a href="mailto:aberdonces@gmail.com" class="footer-panel__link">aberdonces@gmail.com</a>
+    &copy; 2026 Alejandro Berdonces · Barcelona ·
+    <a href="https://www.linkedin.com/in/alexberdonces" target="_blank" rel="noopener" class="footer-panel__link">LinkedIn</a> ·
+    <a href="mailto:aberdonces@gmail.com" class="footer-panel__link">aberdonces@gmail.com</a> ·
+    <a href="/politica-cookies/" class="footer-panel__link">Política de cookies</a> ·
+    <button type="button" id="cookie-preferences" class="footer-panel__link footer-panel__link--btn">Preferencias de cookies</button>
   </div>
 </footer>
 
+<div id="cookie-banner" class="cookie-banner" hidden role="dialog" aria-live="polite" aria-label="Preferencias de cookies">
+  <div class="l-container cookie-banner__wrapper">
+    <p class="cookie-banner__text">
+      Usamos cookies de analítica (Google Analytics) para saber cuánta gente visita esta web. No las activamos hasta que las aceptas. Más info en la <a href="/politica-cookies/">política de cookies</a>.
+    </p>
+    <div class="cookie-banner__actions">
+      <button type="button" id="cookie-reject" class="btn-action btn-action--ghost">Rechazar</button>
+      <button type="button" id="cookie-accept" class="btn-action btn-action--primary">Aceptar</button>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/cookie-consent.js" defer></script>
 </body>
 </html>

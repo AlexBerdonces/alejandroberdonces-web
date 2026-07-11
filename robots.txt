@@ -7,16 +7,25 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-User-agent: ChatGPT-User
-Allow: /
-
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: Google-Extended
+User-agent: ClaudeBot
 Allow: /
 
-User-agent: bingbot
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://alejandroberdonces.com/sitemap.xml

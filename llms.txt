@@ -9,6 +9,13 @@
 - [Français](https://alejandroberdonces.com/fr/): Profil, services et contact en français.
 - [Català](https://alejandroberdonces.com/ca/): Perfil, serveis i contacte en català.
 
+## Política de cookies
+
+- [Español](https://alejandroberdonces.com/politica-cookies/)
+- [English](https://alejandroberdonces.com/en/cookie-policy/)
+- [Français](https://alejandroberdonces.com/fr/politique-cookies/)
+- [Català](https://alejandroberdonces.com/ca/politica-de-cookies/)
+
 ## Servicios
 
 - Auditoría de agentificación: diagnóstico de procesos y roadmap de agentes de IA con ROI estimado.
