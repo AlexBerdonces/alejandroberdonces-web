@@ -30,7 +30,7 @@
 <meta property="og:locale:alternate" content="ca_ES">
 
 <meta property="article:published_time" content="2026-07-11T08:00:00+02:00">
-<meta property="article:modified_time" content="2026-07-11T08:00:00+02:00">
+<meta property="article:modified_time" content="2026-07-12T22:00:00+02:00">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -118,6 +118,7 @@
     <nav class="nav-menu" aria-label="Navigation principale">
       <a href="#a-propos" class="nav-menu__link">À propos</a>
       <a href="#services" class="nav-menu__link">Services</a>
+      <a href="#ameliorateur-prompts" class="nav-menu__link">Essai gratuit</a>
       <a href="#comment-je-travaille" class="nav-menu__link">Comment je travaille</a>
       <a href="#contact" class="nav-menu__link">Contact</a>
     </nav>
@@ -225,6 +226,51 @@
     </div>
   </section>
 
+  <section class="l-section" id="ameliorateur-prompts">
+    <div class="l-container">
+      <div class="section-badge">Outil gratuit</div>
+      <h2 class="section-title">Comment écrire de meilleurs prompts pour ChatGPT ou Gemini ?</h2>
+      <p class="services-intro">Indiquez votre objectif et le contexte, je vous renvoie un prompt amélioré, prêt à coller dans n'importe quelle IA. Gratuit, sans inscription.</p>
+
+      <div class="prompt-tool">
+        <label for="pi-objetivo" class="prompt-tool__label">Votre objectif <span style="color:var(--color-accent-orange)">*</span></label>
+        <textarea id="pi-objetivo" class="prompt-tool__textarea" rows="3" maxlength="1000" placeholder="Ex. : Je veux un email pour réactiver des clients qui n'ont pas acheté depuis 6 mois"></textarea>
+        <p class="prompt-tool__hint">Max. 1 000 caractères</p>
+
+        <label for="pi-contexto" class="prompt-tool__label">Contexte (facultatif)</label>
+        <textarea id="pi-contexto" class="prompt-tool__textarea" rows="5" maxlength="4000" placeholder="Ex. : Je suis une agence de voyages de ski, ton chaleureux, clients B2B, l'email sera envoyé par le gestionnaire de compte..."></textarea>
+        <p class="prompt-tool__hint">Max. 4 000 caractères</p>
+
+        <p class="prompt-tool__notice">N'incluez pas de données personnelles ni d'informations confidentielles. Le texte est traité avec Google Gemini et conservé de façon anonyme pour améliorer l'outil. <a href="/fr/conditions-ameliorateur-prompts/">En savoir plus</a>.</p>
+
+        <div class="cf-turnstile prompt-tool__turnstile" data-sitekey="0x4AAAAAAD0NYarCv4UM0k-S"></div>
+
+        <button id="pi-btn" type="button" class="btn-action btn-action--primary prompt-tool__btn">✨ Améliorer mon prompt</button>
+        <p id="pi-error" class="prompt-tool__error"></p>
+
+        <div class="prompt-tool__result" id="pi-resultado">
+          <div class="prompt-tool__result-head">
+            <span>Votre prompt amélioré</span>
+            <button id="pi-copy" type="button" class="prompt-tool__copy-btn">📋 Copier</button>
+          </div>
+          <div class="prompt-tool__output" id="pi-output"></div>
+
+          <div class="prompt-tool__rating" id="pi-valoracion">
+            <p>Qu'avez-vous pensé du résultat ? Notez-le en un clic :</p>
+            <div class="prompt-tool__stars" id="pi-estrellas">
+              <button data-v="1" aria-label="1 étoile" type="button">★</button>
+              <button data-v="2" aria-label="2 étoiles" type="button">★</button>
+              <button data-v="3" aria-label="3 étoiles" type="button">★</button>
+              <button data-v="4" aria-label="4 étoiles" type="button">★</button>
+              <button data-v="5" aria-label="5 étoiles" type="button">★</button>
+            </div>
+            <p class="prompt-tool__thanks" id="pi-gracias">Merci ! Votre note nous aide à améliorer l'outil.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="process-panel l-section" id="comment-je-travaille">
     <div class="l-container">
       <div class="section-badge">Comment je travaille</div>
@@ -317,5 +363,19 @@
 </div>
 
 <script src="/assets/cookie-consent.js" defer></script>
+
+<script>
+  window.PROMPT_IMPROVER_I18N = {
+    errGoal: "Écrivez au moins votre objectif.",
+    errFail: "Une erreur est survenue. Réessayez.",
+    errConn: "Impossible de se connecter au service. Réessayez.",
+    improving: "Amélioration…",
+    improveBtn: "✨ Améliorer mon prompt",
+    copyBtn: "📋 Copier",
+    copiedBtn: "✅ Copié",
+  };
+</script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script src="/assets/prompt-improver.js" defer></script>
 </body>
 </html>
