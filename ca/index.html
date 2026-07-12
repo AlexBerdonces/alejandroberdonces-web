@@ -30,7 +30,7 @@
 <meta property="og:locale:alternate" content="fr_FR">
 
 <meta property="article:published_time" content="2026-07-11T08:00:00+02:00">
-<meta property="article:modified_time" content="2026-07-11T08:00:00+02:00">
+<meta property="article:modified_time" content="2026-07-12T22:00:00+02:00">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -118,6 +118,7 @@
     <nav class="nav-menu" aria-label="Navegació principal">
       <a href="#sobre-mi" class="nav-menu__link">Sobre mi</a>
       <a href="#serveis" class="nav-menu__link">Serveis</a>
+      <a href="#millorador-prompts" class="nav-menu__link">Prova gratuïta</a>
       <a href="#com-treballo" class="nav-menu__link">Com treballo</a>
       <a href="#contacte" class="nav-menu__link">Contacte</a>
     </nav>
@@ -225,6 +226,51 @@
     </div>
   </section>
 
+  <section class="l-section" id="millorador-prompts">
+    <div class="l-container">
+      <div class="section-badge">Eina gratuïta</div>
+      <h2 class="section-title">Com escriure millors prompts per a ChatGPT o Gemini?</h2>
+      <p class="services-intro">Escriu el teu objectiu i el context, i et retorno un prompt millorat, llest per enganxar a qualsevol IA. Gratuït, sense registre.</p>
+
+      <div class="prompt-tool">
+        <label for="pi-objetivo" class="prompt-tool__label">El teu objectiu <span style="color:var(--color-accent-orange)">*</span></label>
+        <textarea id="pi-objetivo" class="prompt-tool__textarea" rows="3" maxlength="1000" placeholder="Ex.: Vull un email per reactivar clients que no compren des de fa 6 mesos"></textarea>
+        <p class="prompt-tool__hint">Màx. 1.000 caràcters</p>
+
+        <label for="pi-contexto" class="prompt-tool__label">Context (opcional)</label>
+        <textarea id="pi-contexto" class="prompt-tool__textarea" rows="5" maxlength="4000" placeholder="Ex.: Sóc una agència de viatges d'esquí, to proper, clients B2B, l'email l'enviarà el gestor de compte..."></textarea>
+        <p class="prompt-tool__hint">Màx. 4.000 caràcters</p>
+
+        <p class="prompt-tool__notice">No incloguis dades personals ni informació confidencial. El text es processa amb Google Gemini i es desa de forma anònima per millorar l'eina. <a href="/ca/condicions-millorador-prompts/">Més informació</a>.</p>
+
+        <div class="cf-turnstile prompt-tool__turnstile" data-sitekey="0x4AAAAAAD0NYarCv4UM0k-S"></div>
+
+        <button id="pi-btn" type="button" class="btn-action btn-action--primary prompt-tool__btn">✨ Millora el meu prompt</button>
+        <p id="pi-error" class="prompt-tool__error"></p>
+
+        <div class="prompt-tool__result" id="pi-resultado">
+          <div class="prompt-tool__result-head">
+            <span>El teu prompt millorat</span>
+            <button id="pi-copy" type="button" class="prompt-tool__copy-btn">📋 Copiar</button>
+          </div>
+          <div class="prompt-tool__output" id="pi-output"></div>
+
+          <div class="prompt-tool__rating" id="pi-valoracion">
+            <p>Què t'ha semblat el resultat? Valora'l amb un clic:</p>
+            <div class="prompt-tool__stars" id="pi-estrellas">
+              <button data-v="1" aria-label="1 estrella" type="button">★</button>
+              <button data-v="2" aria-label="2 estrelles" type="button">★</button>
+              <button data-v="3" aria-label="3 estrelles" type="button">★</button>
+              <button data-v="4" aria-label="4 estrelles" type="button">★</button>
+              <button data-v="5" aria-label="5 estrelles" type="button">★</button>
+            </div>
+            <p class="prompt-tool__thanks" id="pi-gracias">Gràcies! La teva valoració ens ajuda a millorar l'eina.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="process-panel l-section" id="com-treballo">
     <div class="l-container">
       <div class="section-badge">Com treballo</div>
@@ -317,5 +363,19 @@
 </div>
 
 <script src="/assets/cookie-consent.js" defer></script>
+
+<script>
+  window.PROMPT_IMPROVER_I18N = {
+    errGoal: "Escriu almenys el teu objectiu.",
+    errFail: "Alguna cosa ha fallat. Torna-ho a provar.",
+    errConn: "No s'ha pogut connectar amb el servei. Torna-ho a provar.",
+    improving: "Millorant…",
+    improveBtn: "✨ Millora el meu prompt",
+    copyBtn: "📋 Copiar",
+    copiedBtn: "✅ Copiat",
+  };
+</script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script src="/assets/prompt-improver.js" defer></script>
 </body>
 </html>
