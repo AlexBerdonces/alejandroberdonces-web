@@ -117,6 +117,19 @@
 
 <header class="l-header">
   <div class="l-container l-nav">
+    <details class="mobile-menu">
+      <summary class="mobile-menu__toggle" aria-label="Abrir menú de navegación">
+        <span class="mobile-menu__bars" aria-hidden="true"></span>
+      </summary>
+      <nav class="mobile-menu__panel" aria-label="Navegación móvil">
+        <a href="#sobre-mi" class="mobile-menu__link">Sobre mí</a>
+        <a href="#servicios" class="mobile-menu__link">Servicios</a>
+        <a href="#como-trabajo" class="mobile-menu__link">Cómo trabajo</a>
+        <a href="#mejorador-prompts" class="mobile-menu__link">Mejora de prompts</a>
+        <a href="#contacto" class="mobile-menu__link">Contacto</a>
+        <a class="btn-action btn-action--primary mobile-menu__cta" href="mailto:aberdonces@gmail.com?subject=Quiero%20una%20auditor%C3%ADa%20gratuita">Hablemos</a>
+      </nav>
+    </details>
     <div class="brand-logo">Alejandro <span class="brand-logo__span">Berdonces</span></div>
     <nav class="nav-menu" aria-label="Navegación principal">
       <a href="#sobre-mi" class="nav-menu__link">Sobre mí</a>
@@ -146,7 +159,7 @@
           </a>
         </div>
       </details>
-      <a class="btn-action btn-action--primary" href="mailto:aberdonces@gmail.com?subject=Quiero%20una%20auditor%C3%ADa%20gratuita">Hablemos</a>
+      <a class="btn-action btn-action--primary l-nav__cta" href="mailto:aberdonces@gmail.com?subject=Quiero%20una%20auditor%C3%ADa%20gratuita">Hablemos</a>
     </div>
   </div>
 </header>
@@ -365,6 +378,7 @@
   </div>
 </div>
 
+<script src="/assets/mobile-menu.js" defer></script>
 <script src="/assets/cookie-consent.js" defer></script>
 
 <script>
