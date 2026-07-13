@@ -114,6 +114,19 @@
 
 <header class="l-header">
   <div class="l-container l-nav">
+    <details class="mobile-menu">
+      <summary class="mobile-menu__toggle" aria-label="Ouvrir le menu de navigation">
+        <span class="mobile-menu__bars" aria-hidden="true"></span>
+      </summary>
+      <nav class="mobile-menu__panel" aria-label="Navigation mobile">
+        <a href="#a-propos" class="mobile-menu__link">À propos</a>
+        <a href="#services" class="mobile-menu__link">Services</a>
+        <a href="#comment-je-travaille" class="mobile-menu__link">Comment je travaille</a>
+        <a href="#ameliorateur-prompts" class="mobile-menu__link">Amélioration de prompts</a>
+        <a href="#contact" class="mobile-menu__link">Contact</a>
+        <a class="btn-action btn-action--primary mobile-menu__cta" href="mailto:aberdonces@gmail.com?subject=Je%20veux%20un%20audit%20gratuit">Discutons</a>
+      </nav>
+    </details>
     <div class="brand-logo">Alejandro <span class="brand-logo__span">Berdonces</span></div>
     <nav class="nav-menu" aria-label="Navigation principale">
       <a href="#a-propos" class="nav-menu__link">À propos</a>
@@ -143,7 +156,7 @@
           </a>
         </div>
       </details>
-      <a class="btn-action btn-action--primary" href="mailto:aberdonces@gmail.com?subject=Je%20veux%20un%20audit%20gratuit">Discutons</a>
+      <a class="btn-action btn-action--primary l-nav__cta" href="mailto:aberdonces@gmail.com?subject=Je%20veux%20un%20audit%20gratuit">Discutons</a>
     </div>
   </div>
 </header>
@@ -362,6 +375,7 @@
   </div>
 </div>
 
+<script src="/assets/mobile-menu.js" defer></script>
 <script src="/assets/cookie-consent.js" defer></script>
 
 <script>
