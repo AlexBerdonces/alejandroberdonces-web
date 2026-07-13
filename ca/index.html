@@ -114,6 +114,19 @@
 
 <header class="l-header">
   <div class="l-container l-nav">
+    <details class="mobile-menu">
+      <summary class="mobile-menu__toggle" aria-label="Obrir el menú de navegació">
+        <span class="mobile-menu__bars" aria-hidden="true"></span>
+      </summary>
+      <nav class="mobile-menu__panel" aria-label="Navegació mòbil">
+        <a href="#sobre-mi" class="mobile-menu__link">Sobre mi</a>
+        <a href="#serveis" class="mobile-menu__link">Serveis</a>
+        <a href="#com-treballo" class="mobile-menu__link">Com treballo</a>
+        <a href="#millorador-prompts" class="mobile-menu__link">Millora de prompts</a>
+        <a href="#contacte" class="mobile-menu__link">Contacte</a>
+        <a class="btn-action btn-action--primary mobile-menu__cta" href="mailto:aberdonces@gmail.com?subject=Vull%20una%20auditoria%20gratu%C3%AFta">Parlem</a>
+      </nav>
+    </details>
     <div class="brand-logo">Alejandro <span class="brand-logo__span">Berdonces</span></div>
     <nav class="nav-menu" aria-label="Navegació principal">
       <a href="#sobre-mi" class="nav-menu__link">Sobre mi</a>
@@ -143,7 +156,7 @@
           </a>
         </div>
       </details>
-      <a class="btn-action btn-action--primary" href="mailto:aberdonces@gmail.com?subject=Vull%20una%20auditoria%20gratu%C3%AFta">Parlem</a>
+      <a class="btn-action btn-action--primary l-nav__cta" href="mailto:aberdonces@gmail.com?subject=Vull%20una%20auditoria%20gratu%C3%AFta">Parlem</a>
     </div>
   </div>
 </header>
@@ -362,6 +375,7 @@
   </div>
 </div>
 
+<script src="/assets/mobile-menu.js" defer></script>
 <script src="/assets/cookie-consent.js" defer></script>
 
 <script>
