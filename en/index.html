@@ -122,6 +122,19 @@
 
 <header class="l-header">
   <div class="l-container l-nav">
+    <details class="mobile-menu">
+      <summary class="mobile-menu__toggle" aria-label="Open navigation menu">
+        <span class="mobile-menu__bars" aria-hidden="true"></span>
+      </summary>
+      <nav class="mobile-menu__panel" aria-label="Mobile navigation">
+        <a href="#about" class="mobile-menu__link">About</a>
+        <a href="#services" class="mobile-menu__link">Services</a>
+        <a href="#how-i-work" class="mobile-menu__link">How I work</a>
+        <a href="#prompt-improver" class="mobile-menu__link">Prompt improver</a>
+        <a href="#contact" class="mobile-menu__link">Contact</a>
+        <a class="btn-action btn-action--primary mobile-menu__cta" href="mailto:aberdonces@gmail.com?subject=I%20want%20a%20free%20audit">Let's talk</a>
+      </nav>
+    </details>
     <div class="brand-logo">Alejandro <span class="brand-logo__span">Berdonces</span></div>
     <nav class="nav-menu" aria-label="Main navigation">
       <a href="#about" class="nav-menu__link">About</a>
@@ -151,7 +164,7 @@
           </a>
         </div>
       </details>
-      <a class="btn-action btn-action--primary" href="mailto:aberdonces@gmail.com?subject=I%20want%20a%20free%20audit">Let's talk</a>
+      <a class="btn-action btn-action--primary l-nav__cta" href="mailto:aberdonces@gmail.com?subject=I%20want%20a%20free%20audit">Let's talk</a>
     </div>
   </div>
 </header>
@@ -370,6 +383,7 @@
   </div>
 </div>
 
+<script src="/assets/mobile-menu.js" defer></script>
 <script src="/assets/cookie-consent.js" defer></script>
 
 <script>
