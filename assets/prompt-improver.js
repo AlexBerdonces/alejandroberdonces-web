@@ -81,6 +81,16 @@
     } finally {
       btn.disabled = false;
       btn.textContent = originalLabel;
+      // Un token de Turnstile solo es válido una vez. Sin este reset, un
+      // segundo clic (tras un error o incluso tras un éxito) reenviaría el
+      // mismo token y Cloudflare lo rechazaría siempre como "duplicate".
+      if (window.turnstile) {
+        try {
+          window.turnstile.reset();
+        } catch {
+          // si el widget no está listo o ya se recargó la página, no pasa nada
+        }
+      }
     }
   });
 
