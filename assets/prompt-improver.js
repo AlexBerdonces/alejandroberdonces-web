@@ -22,15 +22,22 @@
   const resultadoEl = $("pi-resultado");
   const outputEl = $("pi-output");
   const copyBtn = $("pi-copy");
+  const copyHintEl = $("pi-copy-hint");
   const valoracionEl = $("pi-valoracion");
   const graciasEl = $("pi-gracias");
   const estrellas = Array.from(document.querySelectorAll("#pi-estrellas button"));
 
   let usoId = null;
+  // Copiar solo se permite tras valorar. Si el Worker no devuelve un id de
+  // uso (no hay nada que valorar), no se bloquea la copia.
+  let valorado = false;
 
   function resetValoracion() {
-    valoracionEl.classList.remove("visible");
+    valorado = false;
+    valoracionEl.classList.remove("visible", "prompt-tool__rating--attention");
     graciasEl.classList.remove("visible");
+    copyBtn.classList.remove("is-locked");
+    if (copyHintEl) copyHintEl.classList.remove("visible");
     estrellas.forEach((b) => {
       b.disabled = false;
       b.classList.remove("is-active");
@@ -73,7 +80,13 @@
         resultadoEl.classList.add("visible");
         usoId = data.id || null;
         resetValoracion();
-        if (usoId) valoracionEl.classList.add("visible");
+        if (usoId) {
+          valoracionEl.classList.add("visible");
+          copyBtn.classList.add("is-locked");
+        } else {
+          // Sin id de uso no hay valoración posible: no se bloquea la copia.
+          valorado = true;
+        }
       }
     } catch {
       errorEl.textContent = t.errConn || "Couldn't connect to the service.";
@@ -95,6 +108,21 @@
   });
 
   copyBtn.addEventListener("click", async () => {
+    if (!valorado) {
+      if (copyHintEl) {
+        copyHintEl.textContent =
+          t.copyLocked ||
+          "Please rate the result from 1 to 5 stars below before copying it.";
+        copyHintEl.classList.add("visible");
+      }
+      valoracionEl.classList.add("prompt-tool__rating--attention");
+      valoracionEl.scrollIntoView({ behavior: "smooth", block: "center" });
+      setTimeout(
+        () => valoracionEl.classList.remove("prompt-tool__rating--attention"),
+        1700
+      );
+      return;
+    }
     const texto = outputEl.textContent;
     try {
       await navigator.clipboard.writeText(texto);
@@ -120,6 +148,11 @@
         b.disabled = true;
       });
       graciasEl.classList.add("visible");
+      // Valorar desbloquea la copia de inmediato, sin esperar a la red.
+      valorado = true;
+      copyBtn.classList.remove("is-locked");
+      if (copyHintEl) copyHintEl.classList.remove("visible");
+      valoracionEl.classList.remove("prompt-tool__rating--attention");
       try {
         await fetch(WORKER_URL + "/rating", {
           method: "POST",
