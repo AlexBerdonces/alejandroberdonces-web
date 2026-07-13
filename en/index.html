@@ -30,7 +30,7 @@
 <meta property="og:locale:alternate" content="ca_ES">
 
 <meta property="article:published_time" content="2026-06-15T08:00:00+02:00">
-<meta property="article:modified_time" content="2026-07-12T22:00:00+02:00">
+<meta property="article:modified_time" content="2026-07-13T19:00:00+02:00">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -305,10 +305,12 @@
             <span>Your improved prompt</span>
             <button id="pi-copy" type="button" class="prompt-tool__copy-btn">📋 Copy</button>
           </div>
+          <p id="pi-copy-hint" class="prompt-tool__copy-hint" role="status" aria-live="polite"></p>
           <div class="prompt-tool__output" id="pi-output"></div>
 
           <div class="prompt-tool__rating" id="pi-valoracion">
-            <p>How did the result turn out? Rate it with one click:</p>
+            <p class="prompt-tool__rating-title">⭐ How did this result turn out?</p>
+            <p class="prompt-tool__rating-sub">Rate it from 1 to 5 to be able to copy it</p>
             <div class="prompt-tool__stars" id="pi-estrellas">
               <button data-v="1" aria-label="1 star" type="button">★</button>
               <button data-v="2" aria-label="2 stars" type="button">★</button>
@@ -387,6 +389,7 @@
     improveBtn: "✨ Improve my prompt",
     copyBtn: "📋 Copy",
     copiedBtn: "✅ Copied",
+    copyLocked: "To copy the prompt, please rate it from 1 to 5 stars below.",
   };
 </script>
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
