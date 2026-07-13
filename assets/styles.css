@@ -108,6 +108,76 @@ a:focus-visible, button:focus-visible {
   gap: 16px;
 }
 
+/* Menú hamburguesa (solo móvil, ver bloque RESPONSIVE) */
+.mobile-menu {
+  display: none;
+}
+.mobile-menu__toggle {
+  align-items: center;
+  justify-content: center;
+  inline-size: 40px;
+  block-size: 40px;
+  cursor: pointer;
+  list-style: none;
+  border-radius: 8px;
+  transition: background-color 0.15s ease;
+}
+.mobile-menu__toggle::-webkit-details-marker,
+.mobile-menu__toggle::marker { display: none; content: ""; }
+.mobile-menu__toggle:hover { background-color: rgba(245, 247, 250, 0.08); }
+
+.mobile-menu__bars,
+.mobile-menu__bars::before,
+.mobile-menu__bars::after {
+  display: block;
+  inline-size: 22px;
+  block-size: 2px;
+  background-color: var(--color-text-light);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
+}
+.mobile-menu__bars {
+  position: relative;
+}
+.mobile-menu__bars::before,
+.mobile-menu__bars::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.mobile-menu__bars::before { top: -7px; }
+.mobile-menu__bars::after { top: 7px; }
+.mobile-menu[open] .mobile-menu__bars { background-color: transparent; }
+.mobile-menu[open] .mobile-menu__bars::before { transform: translateY(7px) rotate(45deg); }
+.mobile-menu[open] .mobile-menu__bars::after { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-menu__panel {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--color-bg-card);
+  border-block-end: 1px solid var(--color-border);
+  padding: 8px 24px 20px;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.45);
+}
+.mobile-menu__link {
+  padding-block: 13px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-dim);
+  border-block-end: 1px solid var(--color-border);
+}
+.mobile-menu__link:hover,
+.mobile-menu__link:active { color: var(--color-text-light); }
+.mobile-menu__cta {
+  margin-block-start: 16px;
+  inline-size: 100%;
+}
+
 .lang-switch {
   position: relative;
 }
@@ -677,8 +747,11 @@ a:focus-visible, button:focus-visible {
    -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
   .nav-menu { display: none; }
-  .l-nav { padding-block: 14px; }
+  .mobile-menu { display: block; }
+  .mobile-menu__toggle { display: flex; }
+  .l-nav { padding-block: 14px; position: relative; }
   .l-nav__actions { gap: 10px; }
+  .l-nav__cta { display: none; }
   .lang-switch__current { font-size: 0.72rem; padding: 4px 6px; }
   .lang-switch__menu { min-inline-size: 118px; }
   .btn-action { padding-inline: 20px; }
