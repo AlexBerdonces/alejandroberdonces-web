@@ -8,6 +8,7 @@
 - [English](https://alejandroberdonces.com/en/): Profile, services and contact in English.
 - [Français](https://alejandroberdonces.com/fr/): Profil, services et contact en français.
 - [Català](https://alejandroberdonces.com/ca/): Perfil, serveis i contacte en català.
+- [Italiano](https://alejandroberdonces.com/it/): Profilo, servizi e contatti in italiano.
 
 ## Política de cookies
 
@@ -15,6 +16,15 @@
 - [English](https://alejandroberdonces.com/en/cookie-policy/)
 - [Français](https://alejandroberdonces.com/fr/politique-cookies/)
 - [Català](https://alejandroberdonces.com/ca/politica-de-cookies/)
+- [Italiano](https://alejandroberdonces.com/it/politica-cookie/)
+
+## Términos del Mejorador de Prompts
+
+- [Español](https://alejandroberdonces.com/terminos-mejorador/)
+- [English](https://alejandroberdonces.com/en/prompt-improver-terms/)
+- [Français](https://alejandroberdonces.com/fr/conditions-ameliorateur-prompts/)
+- [Català](https://alejandroberdonces.com/ca/condicions-millorador-prompts/)
+- [Italiano](https://alejandroberdonces.com/it/condizioni-miglioratore-prompt/)
 
 ## Servicios
 
