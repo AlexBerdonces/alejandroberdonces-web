@@ -30,7 +30,7 @@
 <meta property="og:locale:alternate" content="ca_ES">
 
 <meta property="article:published_time" content="2026-06-15T08:00:00+02:00">
-<meta property="article:modified_time" content="2026-07-20T09:30:00+02:00">
+<meta property="article:modified_time" content="2026-07-20T19:00:00+02:00">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -110,6 +110,28 @@
       ]
     }
   ]
+}
+</script>
+<script type="application/ld+json" id="rating-jsonld">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Mejorador de Prompts",
+  "url": "https://alejandroberdonces.com/#mejorador-prompts",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.82",
+    "ratingCount": "17",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
 }
 </script>
 </head>
@@ -278,6 +300,10 @@
       <div class="section-badge">Herramienta gratuita</div>
       <h2 class="section-title">¿Cómo escribir mejores prompts para ChatGPT o Gemini?</h2>
       <p class="services-intro">Escribe tu objetivo y el contexto, y te devuelvo un prompt mejorado, listo para copiar en cualquier IA. Gratis, sin registro.</p>
+      <p class="rating-badge">
+        <span class="rating-badge__stars" aria-hidden="true">★★★★★</span>
+        <span id="rating-badge-value">4,82</span>/5 · <span id="rating-badge-count">17 valoraciones reales</span>
+      </p>
 
       <div class="prompt-tool">
         <label for="pi-objetivo" class="prompt-tool__label">Tu objetivo <span style="color:var(--color-accent-orange)">*</span></label>
@@ -384,6 +410,8 @@
     improveBtn: "✨ Mejorar mi prompt",
     copyBtn: "📋 Copiar",
     copiedBtn: "✅ Copiado",
+    ratingDecimalComma: true,
+    ratingCountLabel: (n) => (n === 1 ? "1 valoración real" : n + " valoraciones reales"),
   };
 </script>
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
