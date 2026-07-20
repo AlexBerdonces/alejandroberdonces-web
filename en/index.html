@@ -30,7 +30,7 @@
 <meta property="og:locale:alternate" content="ca_ES">
 
 <meta property="article:published_time" content="2026-06-15T08:00:00+02:00">
-<meta property="article:modified_time" content="2026-07-20T09:30:00+02:00">
+<meta property="article:modified_time" content="2026-07-20T19:00:00+02:00">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -115,6 +115,28 @@
       ]
     }
   ]
+}
+</script>
+<script type="application/ld+json" id="rating-jsonld">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Prompt Improver",
+  "url": "https://alejandroberdonces.com/en/#prompt-improver",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.82",
+    "ratingCount": "17",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
 }
 </script>
 </head>
@@ -283,6 +305,10 @@
       <div class="section-badge">Free tool</div>
       <h2 class="section-title">How do you write better prompts for ChatGPT or Gemini?</h2>
       <p class="services-intro">Write your goal and context, and I'll return an improved prompt, ready to paste into any AI tool. Free, no sign-up.</p>
+      <p class="rating-badge">
+        <span class="rating-badge__stars" aria-hidden="true">★★★★★</span>
+        <span id="rating-badge-value">4.82</span>/5 · <span id="rating-badge-count">17 real ratings</span>
+      </p>
 
       <div class="prompt-tool">
         <label for="pi-objetivo" class="prompt-tool__label">Your goal <span style="color:var(--color-accent-orange)">*</span></label>
@@ -389,6 +415,8 @@
     improveBtn: "✨ Improve my prompt",
     copyBtn: "📋 Copy",
     copiedBtn: "✅ Copied",
+    ratingDecimalComma: false,
+    ratingCountLabel: (n) => (n === 1 ? "1 real rating" : n + " real ratings"),
   };
 </script>
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
