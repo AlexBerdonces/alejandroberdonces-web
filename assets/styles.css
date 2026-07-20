@@ -680,16 +680,6 @@ a:focus-visible, button:focus-visible {
   transition: background-color 0.2s ease;
 }
 .prompt-tool__copy-btn:hover { background-color: rgba(30, 102, 202, 0.12); }
-.prompt-tool__copy-btn.is-locked { opacity: 0.75; border-style: dashed; }
-.prompt-tool__copy-btn.is-locked::after { content: " \1F512"; }
-.prompt-tool__copy-hint {
-  color: var(--color-accent-orange);
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-block: 0 10px;
-  display: none;
-}
-.prompt-tool__copy-hint.visible { display: block; }
 .prompt-tool__output {
   background-color: var(--color-bg-dark);
   border: 1px solid var(--color-border);
@@ -704,35 +694,59 @@ a:focus-visible, button:focus-visible {
   color: var(--color-text-light);
 }
 
-/* Bloque de valoración: debe ser imposible de pasar por alto, ya que
-   condiciona la posibilidad de copiar el resultado. */
-.prompt-tool__rating {
-  margin-block-start: 24px;
-  padding: 20px 24px;
+/* Popup CSAT: aparece unos segundos después de pulsar "Copiar", nunca antes.
+   No bloquea nada — es un elemento flotante, cerrable, que no forma parte
+   del flujo normal del widget. */
+.csat-popup {
+  position: fixed;
+  /* ancla para el botón de cerrar, que se posiciona absolute dentro */
+  right: 24px;
+  bottom: 24px;
+  z-index: 250;
+  inline-size: min(320px, calc(100vw - 32px));
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radio-card);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  padding: 20px 22px 18px;
   text-align: center;
   display: none;
-  background-color: rgba(232, 116, 59, 0.08);
-  border: 1.5px dashed var(--color-accent-orange);
-  border-radius: var(--radio-card);
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
-.prompt-tool__rating.visible { display: block; }
-.prompt-tool__rating-title {
+.csat-popup.visible { display: block; }
+.csat-popup.show { opacity: 1; transform: translateY(0); }
+.csat-popup__close {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  color: var(--color-text-dim);
+  font-size: 1.3rem;
+  line-height: 1;
+  padding: 6px;
+  cursor: pointer;
+}
+.csat-popup__close:hover { color: var(--color-text-light); }
+.csat-popup__title {
   color: var(--color-text-light);
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 700;
   margin: 0 0 4px;
 }
-.prompt-tool__rating-sub {
+.csat-popup__sub {
   color: var(--color-text-dim);
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   margin: 0 0 14px;
 }
-.prompt-tool__stars {
+.csat-popup__stars {
   display: flex;
   justify-content: center;
   gap: 4px;
 }
-.prompt-tool__stars button {
+.csat-popup__stars button {
   background: transparent;
   border: none;
   min-inline-size: 44px;
@@ -746,37 +760,33 @@ a:focus-visible, button:focus-visible {
   cursor: pointer;
   transition: transform 0.15s ease, color 0.15s ease;
 }
-.prompt-tool__stars button:hover:not(:disabled) {
+.csat-popup__stars button:hover:not(:disabled) {
   color: #facc15;
   transform: scale(1.15);
 }
-.prompt-tool__stars button:focus-visible {
+.csat-popup__stars button:focus-visible {
   outline: 2px solid var(--color-tech-blue);
   outline-offset: 2px;
   border-radius: 6px;
 }
-.prompt-tool__stars button.is-active { color: #facc15; }
-.prompt-tool__stars button:disabled { cursor: default; }
-.prompt-tool__thanks {
+.csat-popup__stars button.is-active { color: #facc15; }
+.csat-popup__stars button:disabled { cursor: default; }
+.csat-popup__thanks {
   color: var(--color-tech-blue);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 600;
   margin-block-start: 10px;
   display: none;
 }
-.prompt-tool__thanks.visible { display: block; }
+.csat-popup__thanks.visible { display: block; }
 
-@keyframes prompt-tool-attention {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(232, 116, 59, 0.55); }
-  50% { box-shadow: 0 0 0 10px rgba(232, 116, 59, 0); }
-}
-.prompt-tool__rating--attention { animation: prompt-tool-attention 0.8s ease-in-out 2; }
 @media (prefers-reduced-motion: reduce) {
-  .prompt-tool__rating--attention { animation: none; }
+  .csat-popup { transition: none; }
 }
 
 @media (max-width: 768px) {
   .prompt-tool { padding: 24px; }
+  .csat-popup { right: 16px; bottom: 16px; }
 }
 
 /* --------------------------------------------------------------------------
