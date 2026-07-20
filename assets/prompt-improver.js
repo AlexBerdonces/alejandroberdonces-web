@@ -5,6 +5,12 @@
    en cada página antes de cargar este script.
    Seguridad: la respuesta de Gemini se pinta siempre con textContent,
    nunca con innerHTML — no se ejecuta como código aunque contenga HTML/JS.
+
+   Copia: siempre libre e inmediata, sin ninguna condición previa.
+   CSAT: unos segundos después de copiar aparece un popup NO bloqueante
+   pidiendo valorar el resultado (1-5 estrellas). Se puede cerrar con la
+   X, con Escape, o se cierra solo tras valorar. Nunca impide seguir
+   usando la página.
    ========================================================================== */
 (function () {
   "use strict";
@@ -22,22 +28,48 @@
   const resultadoEl = $("pi-resultado");
   const outputEl = $("pi-output");
   const copyBtn = $("pi-copy");
-  const copyHintEl = $("pi-copy-hint");
   const valoracionEl = $("pi-valoracion");
+  const valoracionCloseEl = $("pi-valoracion-close");
   const graciasEl = $("pi-gracias");
   const estrellas = Array.from(document.querySelectorAll("#pi-estrellas button"));
 
   let usoId = null;
-  // Copiar solo se permite tras valorar. Si el Worker no devuelve un id de
-  // uso (no hay nada que valorar), no se bloquea la copia.
-  let valorado = false;
+  let csatShown = false;
+  let csatShowTimer = null;
+  let csatHideTimer = null;
 
-  function resetValoracion() {
-    valorado = false;
-    valoracionEl.classList.remove("visible", "prompt-tool__rating--attention");
-    graciasEl.classList.remove("visible");
-    copyBtn.classList.remove("is-locked");
-    if (copyHintEl) copyHintEl.classList.remove("visible");
+  // Retraso entre "Copiar" y la aparición del popup: lo bastante corto para
+  // que la experiencia siga fresca, lo bastante largo para no sentirse como
+  // una interrupción del propio gesto de copiar.
+  const CSAT_DELAY_MS = 1200;
+  const CSAT_AUTOCLOSE_AFTER_RATING_MS = 1800;
+
+  function showCsat() {
+    if (csatShown || !usoId || !valoracionEl) return;
+    csatShown = true;
+    valoracionEl.classList.add("visible");
+    // Doble rAF para asegurar que el navegador pinta "display: block" antes
+    // de añadir la clase que dispara la transición de entrada.
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => valoracionEl.classList.add("show"));
+    });
+  }
+
+  function hideCsat() {
+    if (!valoracionEl) return;
+    valoracionEl.classList.remove("show");
+    clearTimeout(csatHideTimer);
+    csatHideTimer = setTimeout(() => {
+      valoracionEl.classList.remove("visible");
+    }, 250);
+  }
+
+  function resetCsat() {
+    clearTimeout(csatShowTimer);
+    clearTimeout(csatHideTimer);
+    csatShown = false;
+    if (valoracionEl) valoracionEl.classList.remove("show", "visible");
+    if (graciasEl) graciasEl.classList.remove("visible");
     estrellas.forEach((b) => {
       b.disabled = false;
       b.classList.remove("is-active");
@@ -79,14 +111,7 @@
         outputEl.textContent = data.prompt;
         resultadoEl.classList.add("visible");
         usoId = data.id || null;
-        resetValoracion();
-        if (usoId) {
-          valoracionEl.classList.add("visible");
-          copyBtn.classList.add("is-locked");
-        } else {
-          // Sin id de uso no hay valoración posible: no se bloquea la copia.
-          valorado = true;
-        }
+        resetCsat();
       }
     } catch {
       errorEl.textContent = t.errConn || "Couldn't connect to the service.";
@@ -108,21 +133,6 @@
   });
 
   copyBtn.addEventListener("click", async () => {
-    if (!valorado) {
-      if (copyHintEl) {
-        copyHintEl.textContent =
-          t.copyLocked ||
-          "Please rate the result from 1 to 5 stars below before copying it.";
-        copyHintEl.classList.add("visible");
-      }
-      valoracionEl.classList.add("prompt-tool__rating--attention");
-      valoracionEl.scrollIntoView({ behavior: "smooth", block: "center" });
-      setTimeout(
-        () => valoracionEl.classList.remove("prompt-tool__rating--attention"),
-        1700
-      );
-      return;
-    }
     const texto = outputEl.textContent;
     try {
       await navigator.clipboard.writeText(texto);
@@ -137,6 +147,27 @@
     const original = t.copyBtn || copyBtn.textContent;
     copyBtn.textContent = t.copiedBtn || "✅";
     setTimeout(() => (copyBtn.textContent = original), 2000);
+
+    // La copia nunca espera al CSAT: el popup llega después, por su cuenta.
+    clearTimeout(csatShowTimer);
+    csatShowTimer = setTimeout(showCsat, CSAT_DELAY_MS);
+  });
+
+  if (valoracionCloseEl) {
+    valoracionCloseEl.addEventListener("click", () => {
+      clearTimeout(csatShowTimer);
+      hideCsat();
+    });
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (
+      e.key === "Escape" &&
+      valoracionEl &&
+      valoracionEl.classList.contains("visible")
+    ) {
+      hideCsat();
+    }
   });
 
   estrellas.forEach((starBtn) => {
@@ -147,12 +178,8 @@
         b.classList.toggle("is-active", parseInt(b.dataset.v, 10) <= v);
         b.disabled = true;
       });
-      graciasEl.classList.add("visible");
-      // Valorar desbloquea la copia de inmediato, sin esperar a la red.
-      valorado = true;
-      copyBtn.classList.remove("is-locked");
-      if (copyHintEl) copyHintEl.classList.remove("visible");
-      valoracionEl.classList.remove("prompt-tool__rating--attention");
+      if (graciasEl) graciasEl.classList.add("visible");
+      setTimeout(hideCsat, CSAT_AUTOCLOSE_AFTER_RATING_MS);
       try {
         await fetch(WORKER_URL + "/rating", {
           method: "POST",
