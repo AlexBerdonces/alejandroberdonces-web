@@ -77,6 +77,12 @@
   }
 
   btn.addEventListener("click", async () => {
+    // Medición GA4 (vía GTM): clic en el botón "Mejorar mi prompt".
+    // Se registra el clic en sí, no el resultado — si no hay dataLayer
+    // (cookies rechazadas), el push queda en un array sin efecto.
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: "click_mejorar_prompt" });
+
     const objetivo = objetivoEl.value.trim();
     const contexto = contextoEl.value.trim();
     errorEl.classList.remove("visible");
@@ -133,6 +139,10 @@
   });
 
   copyBtn.addEventListener("click", async () => {
+    // Medición GA4 (vía GTM): clic en el botón "Copiar".
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: "click_copiar_prompt" });
+
     const texto = outputEl.textContent;
     try {
       await navigator.clipboard.writeText(texto);
