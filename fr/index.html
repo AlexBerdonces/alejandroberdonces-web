@@ -30,7 +30,7 @@
 <meta property="og:locale:alternate" content="ca_ES">
 
 <meta property="article:published_time" content="2026-07-11T08:00:00+02:00">
-<meta property="article:modified_time" content="2026-07-13T19:00:00+02:00">
+<meta property="article:modified_time" content="2026-07-20T09:30:00+02:00">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -297,21 +297,7 @@
             <span>Votre prompt amélioré</span>
             <button id="pi-copy" type="button" class="prompt-tool__copy-btn">📋 Copier</button>
           </div>
-          <p id="pi-copy-hint" class="prompt-tool__copy-hint" role="status" aria-live="polite"></p>
           <div class="prompt-tool__output" id="pi-output"></div>
-
-          <div class="prompt-tool__rating" id="pi-valoracion">
-            <p class="prompt-tool__rating-title">⭐ Qu'avez-vous pensé de ce résultat ?</p>
-            <p class="prompt-tool__rating-sub">Notez-le de 1 à 5 pour pouvoir le copier</p>
-            <div class="prompt-tool__stars" id="pi-estrellas">
-              <button data-v="1" aria-label="1 étoile" type="button">★</button>
-              <button data-v="2" aria-label="2 étoiles" type="button">★</button>
-              <button data-v="3" aria-label="3 étoiles" type="button">★</button>
-              <button data-v="4" aria-label="4 étoiles" type="button">★</button>
-              <button data-v="5" aria-label="5 étoiles" type="button">★</button>
-            </div>
-            <p class="prompt-tool__thanks" id="pi-gracias">Merci ! Votre note nous aide à améliorer l'outil.</p>
-          </div>
         </div>
       </div>
     </div>
@@ -357,6 +343,20 @@
   </div>
 </footer>
 
+<div class="csat-popup" id="pi-valoracion" role="status" aria-live="polite">
+  <button type="button" class="csat-popup__close" id="pi-valoracion-close" aria-label="Fermer">&times;</button>
+  <p class="csat-popup__title">⭐ Qu'avez-vous pensé de ce résultat ?</p>
+  <p class="csat-popup__sub">Votre avis nous aide à améliorer l'outil</p>
+  <div class="csat-popup__stars" id="pi-estrellas">
+    <button data-v="1" aria-label="1 étoile" type="button">★</button>
+    <button data-v="2" aria-label="2 étoiles" type="button">★</button>
+    <button data-v="3" aria-label="3 étoiles" type="button">★</button>
+    <button data-v="4" aria-label="4 étoiles" type="button">★</button>
+    <button data-v="5" aria-label="5 étoiles" type="button">★</button>
+  </div>
+  <p class="csat-popup__thanks" id="pi-gracias">Merci ! Votre note nous aide à améliorer l'outil.</p>
+</div>
+
 <div id="cookie-banner" class="cookie-banner" hidden role="dialog" aria-live="polite" aria-label="Préférences de cookies">
   <div class="l-container cookie-banner__wrapper">
     <p class="cookie-banner__text">
@@ -381,7 +381,6 @@
     improveBtn: "✨ Améliorer mon prompt",
     copyBtn: "📋 Copier",
     copiedBtn: "✅ Copié",
-    copyLocked: "Pour copier le prompt, notez-le d'abord de 1 à 5 étoiles ci-dessous.",
   };
 </script>
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
