@@ -19,6 +19,28 @@
   const t = window.PROMPT_IMPROVER_I18N || {};
   const $ = (id) => document.getElementById(id);
 
+  // Badge de valoración en vivo: se actualiza en cada carga real desde el
+  // Worker (mismo dato que alimenta el JSON-LD, que se refresca a diario
+  // vía GitHub Action — ver .github/workflows/refresh-rating.yml). Si el
+  // fetch falla, se queda el valor estático ya presente en el HTML.
+  const ratingValueEl = $("rating-badge-value");
+  const ratingCountEl = $("rating-badge-count");
+  if (ratingValueEl && ratingCountEl) {
+    fetch(WORKER_URL + "/stats")
+      .then((r) => (r.ok ? r.json() : Promise.reject()))
+      .then((data) => {
+        if (typeof data.media !== "number" || typeof data.total !== "number") return;
+        const media = data.media.toFixed(2);
+        ratingValueEl.textContent = t.ratingDecimalComma
+          ? media.replace(".", ",")
+          : media;
+        if (t.ratingCountLabel) {
+          ratingCountEl.textContent = t.ratingCountLabel(data.total);
+        }
+      })
+      .catch(() => {});
+  }
+
   const btn = $("pi-btn");
   if (!btn) return; // esta página no tiene el widget
 
