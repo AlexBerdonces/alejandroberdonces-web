@@ -24,7 +24,7 @@ jobs:
           else
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add index.html en/index.html fr/index.html ca/index.html
+            git add index.html en/index.html fr/index.html ca/index.html it/index.html
             git commit -m "chore: refresh prompt-improver rating (automated)"
             git push
           fi

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Refresca ratingValue/ratingCount del bloque JSON-LD "rating-jsonld" en las
-4 páginas del sitio (index.html, en/, fr/, ca/) con los datos reales del
+5 páginas del sitio (index.html, en/, fr/, ca/, it/) con los datos reales del
 Mejorador de Prompts.
 
 Fuente de datos: GET /stats del Worker de Cloudflare (mejorador-prompts),
@@ -21,7 +21,7 @@ import sys
 import urllib.request
 
 STATS_URL = "https://mejorador-prompts.aberdonces.workers.dev/stats"
-FILES = ["index.html", "en/index.html", "fr/index.html", "ca/index.html"]
+FILES = ["index.html", "en/index.html", "fr/index.html", "ca/index.html", "it/index.html"]
 
 BLOCK_RE = re.compile(
     r'(<script type="application/ld\+json" id="rating-jsonld">)(.*?)(</script>)',
@@ -30,7 +30,18 @@ BLOCK_RE = re.compile(
 
 
 def fetch_stats():
-    with urllib.request.urlopen(STATS_URL, timeout=15) as resp:
+    # Sin cabecera User-Agent, urllib envía "Python-urllib/3.x" por defecto,
+    # que Cloudflare bloquea con 403 en los subdominios *.workers.dev (lo
+    # trata como bot). Con un User-Agent de navegador normal, pasa sin
+    # problema — confirmado el 21 jul 2026 tras el primer fallo en cron.
+    req = urllib.request.Request(
+        STATS_URL,
+        headers={
+            "User-Agent": "Mozilla/5.0 (compatible; alejandroberdonces-web-bot/1.0; +https://alejandroberdonces.com)",
+            "Accept": "application/json",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=15) as resp:
         raw = resp.read().decode("utf-8")
     data = json.loads(raw)
     total = int(data["total"])
