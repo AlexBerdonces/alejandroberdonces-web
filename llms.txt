@@ -26,6 +26,10 @@
 - [Català](https://alejandroberdonces.com/ca/condicions-millorador-prompts/)
 - [Italiano](https://alejandroberdonces.com/it/condizioni-miglioratore-prompt/)
 
+## Genio del Prompting PRO
+
+- [Español](https://alejandroberdonces.com/prompting-pro/): herramienta de pago (9€/mes) que genera prompts profesionales para Claude, ChatGPT, Gemini, Grok, Perplexity, Midjourney, Sora y Veo 3, con opciones avanzadas específicas de cada modelo. Requiere suscripción vía Lemon Squeezy.
+
 ## Servicios
 
 - Auditoría de agentificación: diagnóstico de procesos y roadmap de agentes de IA con ROI estimado.
